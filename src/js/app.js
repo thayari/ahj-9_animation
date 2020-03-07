@@ -1,3 +1,6 @@
+import ChatWidget from './chatWidget';
+import Like from './like';
+
 const container = document.querySelector('.container');
 const buttonCollapse = document.querySelector('#collapse-button');
 const collapsible = document.createElement('div');
@@ -19,3 +22,9 @@ buttonCollapse.addEventListener('click', () => {
     collapsible.addEventListener('transitionend', toggleCollapse);
   }
 });
+
+const chatWidget = new ChatWidget();
+chatWidget.start();
+
+const like = new Like();
+like.start();
